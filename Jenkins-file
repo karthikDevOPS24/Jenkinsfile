@@ -3,4 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git url: '
+                git url: 'https://github.com/karthikDevOPS24/Jenkinsfile.git' , branch: 'main'
+                sh "chmod +x -R ./jenkins"
+                 sh "./jenkins/script/scripted_pipeline_ex_2.sh"
+             }
+         }
+     }
+ }    
